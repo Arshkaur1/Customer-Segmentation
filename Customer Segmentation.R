@@ -16,7 +16,7 @@ barplot(gen, #Data to be displayed on the graph
         legend=rownames(gen)) 
 
 
-per=round(a/sum(a)*100) #percentage of both the gender
+per=round(gen/sum(gen)*100) #percentage of both the gender
 percent=paste(c("Female","Male")," ",per,"%",sep=" ")
 print(percent)
 
@@ -134,7 +134,7 @@ fviz_gap_stat(stat_gap)
 k5<-kmeans(customer_data[,3:5],5,iter.max=100,nstart=50,algorithm="Lloyd")
 k5
 
-#Visualizing the Clustering Results using the First Two Principle Components
+#Visualizing the Clustering Results using the First Two Principal Components
 pcclust=prcomp(customer_data[,3:5],scale=FALSE) #principal component analysis
 summary(pcclust)
 
